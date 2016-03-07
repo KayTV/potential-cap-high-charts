@@ -9,7 +9,7 @@ var db = pgp(connectionString);
 // require('highcharts/modules/exporting')(Highcharts);
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Marketing' });
 });
 
 module.exports = router;

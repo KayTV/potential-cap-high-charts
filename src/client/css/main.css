@@ -1,26 +1,25 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+header{
+    background: url("../assets/red-yellow-orange-wallpaper.jpg");
+    background-size: cover;
+    /*margin: 0;
+    padding: 0;*/
+    height: 400px;
+    width: 100%;
+    background-attachment: fixed;
 }
 
-header {
+.headertext {
   text-align: center;
+  padding-top: 15%;
 }
 
 .navbar {
     margin-bottom: 0;
-    background-color: #e23131;
+    background-color: #ab2627;
     border: 0;
-    opacity:0.9;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.navbar-header {
-    margin-left: 40%;
-    font-size: 40px;
-
 }
 
 .navbar li a, .navbar .navbar-brand {

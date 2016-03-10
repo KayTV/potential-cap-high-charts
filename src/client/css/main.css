@@ -1,8 +1,10 @@
+
+
 header{
     background: url("../assets/red-yellow-orange-wallpaper.jpg");
     background-size: cover;
-    /*margin: 0;
-    padding: 0;*/
+    margin: 0;
+    padding: 0;
     height: 400px;
     width: 100%;
     background-attachment: fixed;
@@ -44,6 +46,8 @@ header{
 
 body {
 	background: #eee !important;
+  text-align: center;
+  
 }
 
 .wrapper {

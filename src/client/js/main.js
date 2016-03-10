@@ -91,7 +91,7 @@ $(function () {
           },
           series: [{
               type: 'pie',
-              name: 'Population Demographics',
+              name: 'Age Range',
               innerSize: '50%',
               data: [
                   ['0-14',   19.7],
@@ -119,7 +119,7 @@ $(function () {
                 plotShadow: false
             },
             title: {
-                text: 'Denver<br>Colorado<br>Age Range<br>2016',
+                text: 'Denver<br>Colorado<br>Population<br>2016',
                 align: 'center',
                 verticalAlign: 'middle',
                 y: 40
@@ -145,15 +145,16 @@ $(function () {
             },
             series: [{
                 type: 'pie',
-                name: 'Population Demographics',
+                name: 'Population By County',
                 innerSize: '50%',
                 data: [
-                    ['0-14',   19.7],
-                    ['15-29',  19.9],
-                    ['30-44',  22.4],
-                    ['45-59',  20.2],
-                    ['60-74',  13.0],
-                    ['75+',    4.7],
+                    ['Adams',   480,317],
+                    ['Arapahoe',  618,341],
+                    ['Boulder',  313,708],
+                    ['Broomfield',  61,826],
+                    ['Denver',  664,220],
+                    ['Douglas',    314,592],
+                    ['Jefferson',    558,532],
                     {
                         name: 'Proprietary or Undetectable',
                         y: 0.2,

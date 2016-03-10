@@ -5,15 +5,15 @@
 
 {% block content %}
 
+<header>
+  <h1 class="headertext">Welcome {{ user.name }}</h1>
+  <h1 class="headertext" style="padding: 0">Let's Get Started!</h1>
+</header>
+
   <div class="container">
     <body>
-      {% if user %}
-        <h1>Welcome,&nbsp;<strong>{{ user.name }} <strong>!</h1>
-          {% else %}
-        <h1>Please&nbsp;<a href="/login">login</a>!</h1>
-      {% endif %}
 
-      <div id="container" style="width:100%; height:400px;"></div>
+      <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
     </body>
 
   </div>

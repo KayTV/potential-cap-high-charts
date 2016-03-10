@@ -3,30 +3,58 @@
 $(document).on('ready', function() {
   console.log('sanity check!');
 
-  $(function () {
+$(function () {
     $('#container').highcharts({
         chart: {
-            type: 'bar'
+            plotBackgroundColor: null,
+            plotBorderWidth: 0,
+            plotShadow: false
         },
         title: {
-            text: 'Fruit Consumption'
+            text: 'Denver<br>Colorado<br>2016',
+            align: 'center',
+            verticalAlign: 'middle',
+            y: 40
         },
-        xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
         },
-        yAxis: {
-            title: {
-                text: 'Fruit eaten'
+        plotOptions: {
+            pie: {
+                dataLabels: {
+                    enabled: true,
+                    distance: -40,
+                    style: {
+                        fontWeight: 'bold',
+                        color: 'white',
+                        textShadow: '0px 1px 2px black'
+                    }
+                },
+                startAngle: -90,
+                endAngle: 90,
+                center: ['50%', '75%']
             }
         },
         series: [{
-            name: 'Jane',
-            data: [1, 0, 4]
-        }, {
-            name: 'John',
-            data: [5, 7, 3]
+            type: 'pie',
+            name: 'Population Demographics',
+            innerSize: '50%',
+            data: [
+                ['White',   70.0],
+                ['African American',  5.0],
+                ['Asian',    3.0],
+                ['Hispanic',     18.0],
+                ['Native American', 1.0],
+                ['Other',    3.0],
+                {
+                    name: 'Proprietary or Undetectable',
+                    y: 0.2,
+                    dataLabels: {
+                        enabled: false
+                    }
+                }
+            ]
         }]
     });
 });
-
 });

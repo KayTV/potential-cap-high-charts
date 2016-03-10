@@ -16,10 +16,11 @@ router.get('/login', function(req, res, next) {
 router.post('/login', function(req, res, next) {
   passport.authenticate('local', function(err, user) {
     if (err) {
+      res.render('login', {title: 'Error', errors: ['Email and/or password incorrect']})
       return next(err);
     } else {
       req.logIn(user, function(err) {
-        if (err) {
+        if (err) {  
           return next(err);
         } else {
           return res.redirect('/');
@@ -69,6 +70,10 @@ router.post('/signup', function(req, res, next) {
 router.get('/logout', function(req, res, next) {
   req.logout();
   res.redirect('/');
+});
+
+router.get('/getstarted', function(req, res, next) {
+  res.render('getstarted', { user: req.user });
 });
 
 module.exports = router;

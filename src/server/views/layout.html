@@ -17,6 +17,9 @@
           </div>
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
+            {% if user %}
+            <li><a href="/getstarted">Get Started!</a></li>
+            {% endif %}
           </ul>
           <ul class="nav navbar-nav navbar-right">
             {% if user %}

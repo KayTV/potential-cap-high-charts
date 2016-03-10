@@ -12,4 +12,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Marketing' });
 });
 
+router.get('/login', function(req, res, next) {
+  res.render('login', { title: 'Marketing' });
+});
+
+router.get('/signup', function(req, res, next) {
+  res.render('signup', { title: 'Marketing' });
+});
+
 module.exports = router;

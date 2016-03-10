@@ -1,7 +1,7 @@
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
-var knex = require('../db/knex');
+var knex = require('../../../db/knex');
 var helpers = require('./helpers');
 
 

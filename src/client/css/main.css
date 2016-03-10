@@ -91,3 +91,9 @@ body {
 	  border-top-right-radius: 0;
 	}
 }
+
+.infoarea {
+  height: 300px;
+  min-width: 310px;
+  max-width: 600px;
+}

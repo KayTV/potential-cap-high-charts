@@ -2,7 +2,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/album-demo'//enter in database when have
+    connection: 'postgres://localhost/marketing_users'
   },
 
   production: {

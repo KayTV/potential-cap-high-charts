@@ -20,7 +20,7 @@ router.post('/login', function(req, res, next) {
       return next(err);
     } else {
       req.logIn(user, function(err) {
-        if (err) {  
+        if (err) {
           return next(err);
         } else {
           return res.redirect('/');
@@ -37,6 +37,7 @@ router.get('/signup', function(req, res, next) {
 router.post('/signup', function(req, res, next) {
   var email = req.body.email;
   var password = req.body.password;
+  var name = req.body.name;
   knex('users').where('email', email)
     .then(function(data){
       // if email is in the database send an error
@@ -48,13 +49,14 @@ router.post('/signup', function(req, res, next) {
         // if email is not in the database insert it
         knex('users').insert({
           email: email,
+          name: name,
           password: hashedPassword
         })
         .then(function(data) {
           req.flash('message', {
             status: 'success',
             message: 'welcome'
-          })
+          });
           return res.redirect('/login');
         })
         .catch(function(err) {

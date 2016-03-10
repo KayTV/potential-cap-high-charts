@@ -32,6 +32,13 @@
         </div>
       </div>
     </nav>
+    <div class="container">
+      {% if message.length %}
+        <div class="alert alert-{{message[0].status}}" role="alert" style="margin-top: 70px">
+          <p>{{ message[0].message }}</p>
+        </div>
+      {% endif %}
+    </div>
     {% block content %}
     {% endblock %}
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>

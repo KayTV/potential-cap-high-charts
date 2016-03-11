@@ -16,6 +16,9 @@ $(function () {
             verticalAlign: 'middle',
             y: 40
         },
+        credits: {
+          enabled: false
+        },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
         },
@@ -70,6 +73,9 @@ $(function () {
               verticalAlign: 'middle',
               y: 40
           },
+          credits: {
+            enabled: false
+          },
           tooltip: {
               pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
           },
@@ -123,6 +129,9 @@ $(function () {
                 align: 'center',
                 verticalAlign: 'middle',
                 y: 40
+            },
+            credits: {
+              enabled: false
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'

@@ -17,7 +17,7 @@ router.post('/login', function(req, res, next) {
   passport.authenticate('local', function(err, user) {
     if (err) {
       res.render('login', {title: 'Error', errors: ['Email and/or password incorrect']})
-      return next(err);
+      // return next(err);
     } else {
       req.logIn(user, function(err) {
         if (err) {
